@@ -3,7 +3,7 @@ terraform {
   backend "s3" {
     bucket = "aws-terraform-demo"
     key    = "dev/eks-with-tf/iam-roles.tfstate"
-    region = "us-east-1"
+    region = "eu-central-1"
 
     dynamodb_table = "vpc-solution"
   }
