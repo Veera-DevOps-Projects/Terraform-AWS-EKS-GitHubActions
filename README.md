@@ -4,6 +4,7 @@
 
 Welcome to the **EKS Deployment with Terraform and GitHub Actions** repository! 
 
+Region = "eu-central-1"
 
 ## Project Overview
 

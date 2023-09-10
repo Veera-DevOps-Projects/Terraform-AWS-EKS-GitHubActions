@@ -1,4 +1,4 @@
-aws_region = "us-east-1"
+aws_region = "eu-central-1"
 
 eks_nodegroup_list = [
   {
@@ -7,7 +7,7 @@ eks_nodegroup_list = [
     ami_type       = "AL2_x86_64"
     capacity_type  = "ON_DEMAND"
     disk_size      = 20
-    instance_types = ["t3.medium"]
+    instance_types = ["t3.micro"]#["t3.medium"]
     remote_access = {
       ec2_ssh_key = "demokey1"
     }
@@ -26,7 +26,7 @@ eks_nodegroup_list = [
     ami_type       = "AL2_x86_64"
     capacity_type  = "ON_DEMAND"
     disk_size      = 20
-    instance_types = ["t3.medium"]
+    instance_types = ["t3.micro"] #["t3.medium"]
     remote_access = {
       ec2_ssh_key = "demokey1"
     }
