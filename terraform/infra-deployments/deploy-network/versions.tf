@@ -2,7 +2,7 @@ terraform {
 
   backend "s3" {
     bucket = "aws-terraform-demo"
-    key    = "dev/eks-with-tf/network.tfstate"
+    key    = "dev/Terraform-AWS-EKS-GitHubActions/network.tfstate"
     region = "us-east-1"
 
     dynamodb_table = "vpc-solution"

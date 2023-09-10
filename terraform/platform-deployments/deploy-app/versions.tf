@@ -14,7 +14,7 @@ terraform {
   backend "s3" {
     bucket = "aws-terraform-demo"
 
-    key = "dev/eks-with-tf/mediawiki.tfstate"
+    key = "dev/Terraform-AWS-EKS-GitHubActions/mediawiki.tfstate"
 
     region = "us-east-1"
 

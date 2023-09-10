@@ -41,8 +41,8 @@ eks_nodegroup_list = [
   }
 ]
 
-parameters = ["/eks-with-tf/aws_region", "/eks-with-tf/business_division", "/eks-with-tf/environment",
-  "/eks-with-tf/cluster_name", "/eks-with-tf/cluster_service_ipv4_cidr", "/eks-with-tf/cluster_version",
-  "/eks-with-tf/cluster_endpoint_private_access", "/eks-with-tf/cluster_endpoint_public_access", "/eks-with-tf/cluster_endpoint_public_access_cidrs",
-  "/eks-with-tf/eks_control_role", "/eks-with-tf/nodegroup_role", "/eks-with-tf/vpc_name", "/eks-with-tf/vpc_public_subnets",
-"/eks-with-tf/vpc_private_subnets"]
+parameters = ["/Terraform-AWS-EKS-GitHubActions/aws_region", "/Terraform-AWS-EKS-GitHubActions/business_division", "/Terraform-AWS-EKS-GitHubActions/environment",
+  "/Terraform-AWS-EKS-GitHubActions/cluster_name", "/Terraform-AWS-EKS-GitHubActions/cluster_service_ipv4_cidr", "/Terraform-AWS-EKS-GitHubActions/cluster_version",
+  "/Terraform-AWS-EKS-GitHubActions/cluster_endpoint_private_access", "/Terraform-AWS-EKS-GitHubActions/cluster_endpoint_public_access", "/Terraform-AWS-EKS-GitHubActions/cluster_endpoint_public_access_cidrs",
+  "/Terraform-AWS-EKS-GitHubActions/eks_control_role", "/Terraform-AWS-EKS-GitHubActions/nodegroup_role", "/Terraform-AWS-EKS-GitHubActions/vpc_name", "/Terraform-AWS-EKS-GitHubActions/vpc_public_subnets",
+"/Terraform-AWS-EKS-GitHubActions/vpc_private_subnets"]

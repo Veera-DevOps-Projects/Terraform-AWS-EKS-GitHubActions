@@ -2,7 +2,7 @@ data "terraform_remote_state" "eks_state" {
   backend = "s3"
   config = {
     bucket = "aws-terraform-demo"
-    key    = "dev/eks-with-tf/eks.tfstate"
+    key    = "dev/Terraform-AWS-EKS-GitHubActions/eks.tfstate"
     region = "us-east-1"
   }
 }
