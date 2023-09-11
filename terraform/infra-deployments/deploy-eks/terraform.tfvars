@@ -1,4 +1,4 @@
-aws_region = "us-east-1"
+aws_region = "eu-central-1"
 
 eks_nodegroup_list = [
   {

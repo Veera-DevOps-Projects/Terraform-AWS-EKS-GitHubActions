@@ -3,7 +3,7 @@
 variable "aws_region" {
   description = "Region Name"
   type        = string
-  default     = "us-east-1"
+  default     = "eu-central-1"
 }
 
 variable "business_division" {
