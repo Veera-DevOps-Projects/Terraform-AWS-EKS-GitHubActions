@@ -1,5 +1,5 @@
 resource "aws_eip" "elastic-ip-for-nat-gw" {
-  vpc                       = true
+  domain                       = "vpc"
   associate_with_private_ip = "10.0.0.5"
 
   tags = {
