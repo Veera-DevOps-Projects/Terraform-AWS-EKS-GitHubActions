@@ -4,7 +4,7 @@
 
 Welcome to the **EKS Deployment with Terraform and GitHub Actions** repository! 
 
-Region = "eu-central-1"
+
 
 ## Project Overview
 
@@ -28,7 +28,7 @@ The repository is organized as follows:
 
 To get started with this project:
 
-1. Clone this repository: 
+1. Clone this repository
 2. Navigate to the `/terraform` directory and customize the Terraform configurations as needed.
 3. Review and modify the application stack code in the `/terraform/platform-deployments` directory to match your application requirements.
 4. Set up appropriate AWS credentials and permissions for Terraform and GitHub Actions.
@@ -78,7 +78,7 @@ The above figure shows the codebase highlighted by red boxes is for infrastructu
 
 We are going to deploy a simple application stack by using Kubernetes Terraform provider. The application stack will use a Nginx image from docker and deploy application pod and Kubernetes Load Balancer Service, the service type will be AWS Classic Load Balancer.
 
-![Project Logo](k8-deployment.png)
+![Project Logo](K8-deployment.png)
 
 The above figure shows the simple view of the application deployed in the EKS Cluster using Terraform Kubernetes Provider.
 
@@ -97,15 +97,11 @@ GitHub Actions offer a powerful way to automate workflows directly within the Gi
 ## EKS-With-Terraform CI
 This workflow/pipeline can be triggered upon code changes (currently it’s a manual run). It runs tests, linters, and checks to ensure code quality. It acts as an initial gatekeeper before any further deployment actions. There are five jobs defined in this workflow. These jobs are;
 
-iam_ci
-
-network_ci
-
-eks_ci
-
-bastion_host_ci
-
-app_ci
+**iam_ci**
+**network_ci**
+**eks_ci**
+**bastion_host_ci**
+**app_ci**
 
 ![Project Logo](github-actions-workflow.png)
 
@@ -121,6 +117,7 @@ There are five different jobs defined in this workflow;
 
 **Deploy IAM**: This job deploys two IAM roles. One role is related to Cluster Operations and the other role is for Node Groups.
 
+**Deploy Bastion Host**: This job deploys EC2 instances with attached network policies
 
 **Deploy EKS**: This job is related to the above two jobs, once network, and IAM roles are deployed then this job starts it’s execution. It deploys an EKS cluster using the already deployed Network.
 
@@ -132,7 +129,9 @@ All the initial inputs for Infrastructure deployment were fetched from the AWS S
 
 
 ## EKS-With-Terraform Deployment Delete
+
 This workflow/pipeline allows for the graceful dismantling of the infrastructure when needed. It cleans up all the resources created during the stack deployment process.
+
 
 # EKS Elastic Network Interface Significance
 
@@ -153,11 +152,3 @@ Security: ENIs can be associated with security groups, which can help to control
 
 Scalability: ENIs can be scaled up or down as needed, which makes them a good choice for clusters that are expected to change in size.
 
-
-## Contributing
-
-Contributions to this project are welcome! If you find any issues or have improvements to suggest, feel free to submit a pull request.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
