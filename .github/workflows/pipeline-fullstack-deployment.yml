@@ -64,7 +64,7 @@ jobs:
       run: echo "::set-output name=changed::$(terraform show -json tfplan | jq '.resource_changes | length > 0')"
 
     - name: Terraform Apply
-      run: terraform apply -var-file=../environments/dev/iam.tfvars -auto-approve -lock=false
+      run: terraform apply -var-file=../environments/dev/iam.tfvars -auto-approve  
 
     - name: Store Outputs
       id: terraform_outputs
@@ -124,7 +124,7 @@ jobs:
       run: echo "::set-output name=changed::$(terraform show -json tfplan | jq '.resource_changes | length > 0')"
 
     - name: Terraform Apply
-      run: terraform apply -var-file=../../environments/dev/deploy-network.tfvars -auto-approve -lock=false
+      run: terraform apply -var-file=../../environments/dev/deploy-network.tfvars -auto-approve  
 
     - name: Store Outputs
       id: terraform_outputs
@@ -185,7 +185,7 @@ jobs:
       run: echo "::set-output name=changed::$(terraform show -json tfplan | jq '.resource_changes | length > 0')"
 
     - name: Terraform Apply
-      run: terraform apply -var-file=../../environments/dev/deploy-eks.tfvars -auto-approve -lock=false
+      run: terraform apply -var-file=../../environments/dev/deploy-eks.tfvars -auto-approve  
 
     - name: Store Outputs
       id: terraform_outputs
@@ -246,7 +246,7 @@ jobs:
       run: echo "::set-output name=changed::$(terraform show -json tfplan | jq '.resource_changes | length > 0')"
 
     - name: Terraform Apply
-      run: terraform apply -var-file=../../environments/dev/deploy-bastion-host.tfvars -auto-approve -lock=false
+      run: terraform apply -var-file=../../environments/dev/deploy-bastion-host.tfvars -auto-approve  
 
     - name: Store Outputs
       id: terraform_outputs
