@@ -28,5 +28,5 @@ variable "parameters" {
 variable "vpc_name" {
   description = "Cluster VPC Name"
   type        = string
-  #default = "finance-dev-myvpc-VPC"
+  default = "finance-dev-myvpc-VPC"
 }
