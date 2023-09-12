@@ -7,11 +7,11 @@ data "aws_iam_role" "eks_nodegroup_role" {
 }
 
 data "aws_vpc" "vpc" {
-  name = var.vpc_name
-#  filter {
-#    name   = "tag:Name"
-#    values = [var.vpc_name]
-#  }
+  #name = var.vpc_name
+  filter {
+    name   = "tag:Name"
+    values = ["${var.vpc_name}"]
+  }
 }
 
 data "aws_subnets" "private-subnets" {
