@@ -72,7 +72,7 @@ variable "nodegroup_role" {
 variable "vpc_name" {
   description = "Cluster VPC Name"
   type        = string
-  default = " finance-dev-myvpc-VPC"
+  default = "finance-dev-myvpc-VPC"
 }
 
 variable "vpc_public_subnets" {
