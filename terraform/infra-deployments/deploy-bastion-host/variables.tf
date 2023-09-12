@@ -24,3 +24,9 @@ variable "key_pair_name" {
 variable "parameters" {
   type = set(string)
 }
+
+variable "vpc_name" {
+  description = "Cluster VPC Name"
+  type        = string
+  #default = "finance-dev-myvpc-VPC"
+}
