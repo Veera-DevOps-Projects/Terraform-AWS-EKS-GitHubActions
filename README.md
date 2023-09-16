@@ -1,3 +1,7 @@
+[![EKS-With-Terraform CI](https://github.com/Veera-DevOps-Projects/Terraform-AWS-EKS-GitHubActions/actions/workflows/pipeline-ci.yml/badge.svg)](https://github.com/Veera-DevOps-Projects/Terraform-AWS-EKS-GitHubActions/actions/workflows/pipeline-ci.yml)
+
+[![EKS-With-Terraform Deployment Delete](https://github.com/Veera-DevOps-Projects/Terraform-AWS-EKS-GitHubActions/actions/workflows/pipeline-delete.yml/badge.svg)](https://github.com/Veera-DevOps-Projects/Terraform-AWS-EKS-GitHubActions/actions/workflows/pipeline-delete.yml)
+
 # EKS Deployment with Terraform and GitHub Actions
 
 ![Project Logo](coverage.png)
