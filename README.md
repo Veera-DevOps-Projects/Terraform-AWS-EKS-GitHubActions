@@ -4,7 +4,7 @@
 
 # EKS Deployment with Terraform and GitHub Actions
 
-![Project Logo](coverage.png)
+![Project Logo](images/coverage.png)
 
 Welcome to the **EKS Deployment with Terraform and GitHub Actions** repository! 
 
@@ -61,7 +61,7 @@ The custom VPC and its components, including subnets and security groups, play a
 
 
 
-![Project Logo](Project-infra.png)
+![Project Logo](images/Project-infra.png)
 
 We are going to build an AWS EKS cluster within a custom multi-tier network. Deployed cloud components will contain an EKS control plane, an EKS data plane with public and private node-groups, IAM roles for the cluster as well as node-groups, and a bastion host EC2 instance in the public subnet to connect the worker EC2 node instances. 
 
@@ -73,7 +73,7 @@ All these cloud components will be deployed by using a terraform codebase with w
 
 ## Code Structure
 
-![Project Logo](code-structure.png)
+![Project Logo](images/code-structure.png)
 
 
 The above figure shows the codebase highlighted by red boxes is for infrastructure deployment. **infra-deployment** code section has three different main execution sections. **deploy-bastion-host** is for deploying EC2 instances in the public subnet, this EC2 instance can connect to EKS worker nodes via port 22(SSH protocol). **deploy-network** builds the custom VPC network. **deploy-eks** deploys the AWS EKS cluster on a custom VPC network. Bastion host code uses a **compute** module. Network and EKS cluster build uses **network** and **k8s** modules for deploying cloud components. Just above the **infra-deployments** codebase section, there is **iam** codebase, which uses **iam-role** module to deploy cluster and node group-specific IAM roles. **environments** folder contains all terraform input variable values for the dev environment.
@@ -82,13 +82,13 @@ The above figure shows the codebase highlighted by red boxes is for infrastructu
 
 We are going to deploy a simple application stack by using Kubernetes Terraform provider. The application stack will use a Nginx image from docker and deploy application pod and Kubernetes Load Balancer Service, the service type will be AWS Classic Load Balancer.
 
-![Project Logo](K8-deployment.png)
+![Project Logo](images/K8-deployment.png)
 
 The above figure shows the simple view of the application deployed in the EKS Cluster using Terraform Kubernetes Provider.
 
 ## Code Structure
 
-![Project Logo](k8-code.png)
+![Project Logo](images/k8-code.png)
 
 The above figure shows the codebase highlighted by red boxes is for application/platform. **platform-deployment** code section has one main execution section called deploy-app. deploy-app uses platform module to deploy a simple Nginx webserver application using Kubernetes Terraform Provider. 
 
@@ -107,7 +107,7 @@ This workflow/pipeline can be triggered upon code changes (currently it’s a ma
 **bastion_host_ci**
 **app_ci**
 
-![Project Logo](github-actions-workflow.png)
+![Project Logo](images/github-actions-workflow.png)
 
 The above figure shows the GitHub Actions CI workflow, which executes some scans for format checking, configuration validation, static code scans for compliance, and vulnerability detection
 
